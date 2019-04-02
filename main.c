@@ -63,13 +63,15 @@ int main()
                     }
                 break;
         }
+
+        system("pause");
     }while(value !=5);
 
     return 0;
 }
 
 void menu(int num1Flag, int num1, int num2Flag, int num2){
-
+    system("cls");
     printf("\n\nMENU DE OPCIONES \n");
 
     if(!num1Flag){
