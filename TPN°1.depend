@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1554238331 source:c:\users\dylan\desktop\tpn°1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"operations.h"
+
+1554234930 source:c:\users\dylan\desktop\tpn°1\operations.c
+	<stdio.h>
+
+1554234930 c:\users\dylan\desktop\tpn°1\operations.h
+
