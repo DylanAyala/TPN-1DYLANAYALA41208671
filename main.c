@@ -4,7 +4,7 @@
 #include "operations.h"
 
 void menu(int num1Flag, int num1, int num2Flag, int num2 );
-void results(int num1, int num2,int sum,int resta, float divide, int multiply,
+void results(int num1, int num2,int sum,int resta, float divide, int multiplication,
              long factorialNum1, long factorialNum2 );
 int getNumber(int value);
 
@@ -17,7 +17,7 @@ int main()
     int num2Flag = 0;
     int sum;
     int resta;
-    int multiply;
+    int multiplication;
     int operatationFlag = 0;
     float divide;
     long factorialNum1;
@@ -46,7 +46,7 @@ int main()
                         sum = operatationSum(num1, num2);
                         resta = operatationResta(num1, num2);
                         divide = operatationDivide(num1, num2);
-                        multiply = operatationMultiply(num1, num2);
+                        multiplication = operatationMultiplication(num1, num2);
                         factorialNum1 = operatationFactorial(num1);
                         factorialNum2 = operatationFactorial(num2);
                         operatationFlag = 1;
@@ -59,7 +59,7 @@ int main()
                 }else if (!operatationFlag){
                         printf("\n\nSe debe realizar las operaciones primero\n\n");
                 }else{
-                    results(num1, num2,sum, resta, divide, multiply, factorialNum1, factorialNum2);
+                    results(num1, num2,sum, resta, divide, multiplication, factorialNum1, factorialNum2);
                     }
                 break;
         }
@@ -114,12 +114,12 @@ int getNumber(int value){
     return num;
 }
 
-void results(int num1, int num2,int sum,int resta, float divide, int multiply,
+void results(int num1, int num2,int sum,int resta, float divide, int multiplication,
              long factorialNum1, long factorialNum2 ){
 
     printf("    a) El resultado de %d+%d es: %d\n", num1, num2, sum);
     printf("    b) El resultado de %d-%d es: %d\n", num1, num2, resta);
     printf("    c) El resultado de %d/%d es: %.2f \n", num1, num2, divide);
-    printf("    d) El resultado de %d*%d es: %d\n", num1, num2, multiply);
+    printf("    d) El resultado de %d*%d es: %d\n", num1, num2, multiplication);
     printf("    e) El factorial de %d es: %ld y El factorial de %d es: %ld\n",num1, factorialNum1, num2, factorialNum2);
 }

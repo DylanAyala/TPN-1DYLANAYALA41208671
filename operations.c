@@ -12,7 +12,7 @@ float operatationDivide(int num1, int num2){
     return (float)num1 / num2;
 }
 
-int operatationMultiply(int num1, int num2){
+int operatationMultiplication(int num1, int num2){
 return num1 * num2;
 }
 

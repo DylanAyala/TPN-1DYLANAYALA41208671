@@ -25,7 +25,7 @@ int operatationResta(int num1, int num2);
  * \return int con la multiplicacion de num1 y num2
  *
  */
-int operatationMultiply(int num1, int num2);
+int operatationMultiplication(int num1, int num2);
 
 /** \brief
  *
