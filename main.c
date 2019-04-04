@@ -34,10 +34,12 @@ int main()
             case 1:
                 num1 = getNumber(value);
                 num1Flag = 1;
+                operatationFlag = 0;
                 break;
             case 2:
                 num2 = getNumber(value);
                 num2Flag = 1;
+                operatationFlag = 0;
                 break;
             case 3:
                    if(!(num1Flag && num2Flag)){
@@ -52,6 +54,7 @@ int main()
                         operatationFlag = 1;
                         printf("\n\nSe realizo correctamente las operaciones\n\n");
                     }
+
                 break;
             case 4:
                 if(!(num1Flag && num2Flag)){
@@ -62,6 +65,11 @@ int main()
                     results(num1, num2,sum, resta, divide, multiplication, factorialNum1, factorialNum2);
                     }
                 break;
+            case 5:
+                printf("Saliendo del progama\n");
+                break;
+            default:
+                printf("Opcion no valida\n");
         }
 
         system("pause");

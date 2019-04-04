@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1554239325 source:c:\users\dylan\desktop\tpn°1\main.c
+1554242423 source:c:\users\dylan\desktop\tpn°1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"operations.h"
@@ -7,5 +7,5 @@
 1554242403 source:c:\users\dylan\desktop\tpn°1\operations.c
 	<stdio.h>
 
-1554241460 c:\users\dylan\desktop\tpn°1\operations.h
+1554242403 c:\users\dylan\desktop\tpn°1\operations.h
 
