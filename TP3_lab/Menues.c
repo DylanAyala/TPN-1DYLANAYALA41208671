@@ -1,7 +1,7 @@
 #include "Menues.h"
 
 
-int menu(void)
+int menu()
 {
     int option;
     system("cls");
@@ -45,14 +45,14 @@ int menuOfOreder (void)
 
 
 
-int typeOfOrder(void)
+int typeOfOrder()
 {
     char selec;
     int opt;
     printf("\n");
     printf("A-Desendente\n");
     printf("B-Asendente\n");
-    printf("Seleccione por favor: ");
+    printf("Ingrese opcion: ");
     fflush(stdin);
     scanf("%c",&selec);
     selec=toupper(selec);

@@ -56,12 +56,13 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
     int itsOk=-1;
-    char auxId[50];
+    int auxId;
+    char idAux[50];
     char auxHoras[50];
     char auxSalario[50];
     char auxNombre[130];
     char confirm;
-    int index=0;
+    int index=-1;
     Employee* auxEmployee=employee_new();
 
 
@@ -70,7 +71,33 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 
     printf("Ingrese ID: ");
     fflush(stdin);
-    gets(auxId);
+    scanf("%d", &auxId);
+
+    for(int i=0; i<ll_len(pArrayListEmployee); i++)
+    {
+        auxEmployee= ((Employee*) ll_get(pArrayListEmployee,i));
+        if(auxEmployee->id==auxId)
+        {
+            index=i;
+            break;
+        }
+    }
+    while(index!=-1){
+        printf("El ID ya existe, ingrese otro: ");
+        fflush(stdin);
+        scanf("%d", &auxId);
+        index=-1;
+        for(int i=0; i<ll_len(pArrayListEmployee); i++)
+        {
+            auxEmployee= ((Employee*) ll_get(pArrayListEmployee,i));
+            if(auxEmployee->id==auxId)
+            {
+                index=i;
+                break;
+        }
+        }
+    }
+    sprintf(idAux, "%d", auxId);
 
     printf("Ingrese nombre: ");
     fflush(stdin);
@@ -90,7 +117,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     confirm=tolower(confirm);
     if(confirm=='s')
     {
-        Employee* empNew=employee_newParametros(auxId,auxNombre,auxHoras,auxSalario);
+        Employee* empNew=employee_newParametros(idAux,auxNombre,auxHoras,auxSalario);
         ll_add(pArrayListEmployee,empNew);
         itsOk=1;
     }

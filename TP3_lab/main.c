@@ -102,9 +102,7 @@ int main()
             else
             {
                 result=controller_sortEmployee(employeeLinkedList);
-                if(result)
-                    printf("Gracias por la espera\n");
-                else
+                if(!result)
                     printf("\nError al realizar el ordenamiento\n");
             }
             break;
@@ -143,7 +141,7 @@ int main()
 
         case 0:
 
-            printf("Finalizar el programa?\n");
+            printf("Salir?\n");
             printf("Confirma? S/N: ");
             fflush(stdin);
             confirm=getchar();
