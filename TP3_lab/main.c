@@ -34,7 +34,7 @@ int main()
     int addOk;
 
     int flagLoadLinkedList=0;
-    int flagBuffer=0;
+    int flagAdd=0;
 
     LinkedList* employeeLinkedList = ll_newLinkedList();
 
@@ -72,7 +72,7 @@ int main()
             result=controller_addEmployee(employeeLinkedList);
             addOk=statusAddEmployee(result);
             if(addOk==1)
-                flagBuffer=1;
+                flagAdd=1;
             break;
 
         case 4:
@@ -89,7 +89,7 @@ int main()
 
         case 6:
 
-            if(!flagBuffer && !flagLoadLinkedList)
+            if(!flagAdd && !flagLoadLinkedList)
                 printf("\nNo hay ningun dato cargado\n\n");
             else
                 result=controller_ListEmployee(employeeLinkedList);
@@ -97,7 +97,7 @@ int main()
 
         case 7:
 
-            if(!flagBuffer && !flagLoadLinkedList)
+            if(!flagAdd && !flagLoadLinkedList)
                 printf("No hay ningun dato cargado\n");
             else
             {
@@ -116,7 +116,7 @@ int main()
             {
                 printf("Se guardo correctamente\n");
                 flagLoadLinkedList=0;
-                flagBuffer=0;
+                flagAdd=0;
                 ll_deleteLinkedList(employeeLinkedList);
                 employeeLinkedList=ll_newLinkedList();
             }
@@ -131,7 +131,7 @@ int main()
             {
                 printf("El archivo se creo correctamente\n");
                 flagLoadLinkedList=0;
-                flagBuffer=0;
+                flagAdd=0;
                 ll_deleteLinkedList(employeeLinkedList);
                 employeeLinkedList=ll_newLinkedList();
             }
